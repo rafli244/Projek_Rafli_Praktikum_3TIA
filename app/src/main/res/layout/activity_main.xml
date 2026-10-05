@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Judul Halaman -->
+    <TextView
+        android:id="@+id/txtUsername2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Halaman Main Activity"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Label Username -->
+    <TextView
+        android:id="@+id/txtUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Username"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsername2" />
+
+    <!-- Label Password -->
+    <TextView
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Password"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsername" />
+
+    <!-- Wadah CardView -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword">
+
+        <!-- ConstraintLayout sebagai pengganti LinearLayout di dalam CardView -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <!-- Tombol SnackBar -->
+            <Button
+                android:id="@+id/btnSnackBar"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:text="SnackBar"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Tombol Alert -->
+            <Button
+                android:id="@+id/btnAlert"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/black"
+                android:text="Alert"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSnackBar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
