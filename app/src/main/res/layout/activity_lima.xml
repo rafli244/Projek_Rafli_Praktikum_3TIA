@@ -14,15 +14,6 @@
         android:layout_height="wrap_content"
         app:elevation="0dp">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#121212"
-            app:subtitleTextColor="#B0B0B0"
-            app:titleTextColor="@android:color/white"
-            app:layout_scrollFlags="enterAlways" />
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -200,5 +191,16 @@
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#121212"
+        app:layout_anchor="@+id/appBar"
+        app:layout_anchorGravity="center"
+        app:layout_scrollFlags="enterAlways"
+        app:subtitleTextColor="#B0B0B0"
+        app:titleTextColor="@android:color/white" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
