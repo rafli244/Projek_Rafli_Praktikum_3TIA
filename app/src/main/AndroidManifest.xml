@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Rafli_3TIA">
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".BaseActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -28,19 +28,27 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Pertemuan_5.LimaActivity"
+            android:name=".Home.Pertemuan_5.LimaActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Pertemuan_5.WebViewActivity"
+            android:name=".Home.Pertemuan_5.WebViewActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Pertemuan_6.EnamActivity"
+            android:name=".Home.Pertemuan_6.EnamActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".LginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Message.MessageActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

@@ -7,8 +7,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.rafli_3tia.Pertemuan_5.LimaActivity
-import com.example.rafli_3tia.Pertemuan_6.EnamActivity
+import com.example.rafli_3tia.Home.Pertemuan_5.LimaActivity
+import com.example.rafli_3tia.Home.Pertemuan_6.EnamActivity
 import com.example.rafli_3tia.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
