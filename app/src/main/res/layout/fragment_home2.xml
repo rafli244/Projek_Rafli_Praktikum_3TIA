@@ -8,6 +8,17 @@
     tools:context=".Home.HomeFragment">
 
     <!-- Toolbar Utama -->
+    <View
+        android:id="@+id/background_header"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:background="@drawable/bg_header_wave"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -19,7 +30,7 @@
         app:title="Home"
         app:titleTextColor="@android:color/white" />
 
-    <!-- Card Title Container (Sudah diperbaiki posisinya ke bawah Toolbar) -->
+    <!-- Card Title Container -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardTitleContainer"
         android:layout_width="0dp"
@@ -38,7 +49,7 @@
         <TextView
             android:id="@+id/txtUsername2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:paddingHorizontal="16dp"
             android:paddingVertical="12dp"
             android:text="Halaman Main Activity"
@@ -49,12 +60,11 @@
 
     </androidx.cardview.widget.CardView>
 
-    <!-- Label Username -->
     <TextView
         android:id="@+id/txtUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="44dp"
         android:fontFamily="sans-serif-medium"
         android:shadowColor="#000000"
         android:shadowDx="2"
@@ -64,15 +74,15 @@
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardTitleContainer" />
 
-    <!-- Label Password -->
     <TextView
         android:id="@+id/txtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-medium"
         android:shadowColor="#000000"
         android:shadowDx="2"
@@ -87,97 +97,99 @@
 
     <!-- Wadah CardView Utama -->
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardAction"
+        android:id="@+id/MaterialCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="20dp"
-        app:cardBackgroundColor="@android:color/white"
+        app:cardBackgroundColor="#FFCBAF"
         app:cardCornerRadius="16dp"
         app:cardElevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPassword"
-        app:strokeColor="#E0E0E0"
+        app:strokeColor="#FFFFFF"
         app:strokeWidth="1dp">
 
-        <!-- ConstraintLayout Rapi di Dalam CardView -->
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <!-- IMPLEMENTASI GRIDLAYOUT YANG BENAR -->
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp">
+            android:padding="16dp"
+            app:columnCount="2"
+            app:useDefaultMargins="true">
 
             <!-- Tombol SnackBar -->
             <Button
                 android:id="@+id/btnSnackBar"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal"
                 android:backgroundTint="#121212"
                 android:text="SnackBar"
                 android:textColor="@android:color/white"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textSize="15sp" />
 
             <!-- Tombol Alert -->
             <Button
                 android:id="@+id/btnAlert"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="12dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal"
                 android:backgroundTint="#333333"
                 android:text="Alert"
                 android:textColor="@android:color/white"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnSnackBar" />
+                android:textSize="15sp" />
 
             <!-- Tombol Lima -->
             <Button
                 android:id="@+id/btnToLima"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="12dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal"
                 android:backgroundTint="#666666"
                 android:text="Button Lima"
                 android:textColor="@android:color/white"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnAlert" />
+                android:textSize="15sp" />
 
             <!-- Tombol Enam -->
             <Button
                 android:id="@+id/btnToEnam"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="12dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal"
                 android:backgroundTint="#444444"
                 android:text="Pertemuan 6"
                 android:textColor="@android:color/white"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnToLima" />
+                android:textSize="15sp" />
 
             <!-- Tombol Logout -->
             <Button
                 android:id="@+id/btnLogout"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="12dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal"
                 android:backgroundTint="#D32F2F"
                 android:text="Logout"
                 android:textColor="@android:color/white"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnToEnam" />
+                android:textSize="15sp" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Tombol Pertemuan 9 -->
+            <Button
+                android:id="@+id/btnToSembilan"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal"
+                android:text="Pertemuan_9" />
+
+        </androidx.gridlayout.widget.GridLayout>
 
     </com.google.android.material.card.MaterialCardView>
 

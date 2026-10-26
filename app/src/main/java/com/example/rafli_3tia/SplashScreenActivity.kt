@@ -15,14 +15,28 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_splash_screen)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Memeriksa status login dari SharedPreferences
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+        val isLogin = sharedPref.getBoolean("isLogin", false)
+
+        if (isLogin) {
+            // Jika sudah login, langsung diarahkan ke BaseActivity tanpa delay
+            startActivity(Intent(this, BaseActivity::class.java))
+            finish()
+            return // Menghentikan eksekusi agar tidak lanjut ke blok lifecycleScope di bawahnya
+        }
+
+        // Jika belum login, jalankan delay 2 detik lalu ke TutorialScreenActivity
         lifecycleScope.launch {
             delay(2000) // simulasi pengambilan data selama 2 detik
-            val intent = Intent(this@SplashScreenActivity, MainActivity::class.java)
+            val intent = Intent(this@SplashScreenActivity, TutorialScreenActivity::class.java)
             startActivity(intent)
             finish()
         }

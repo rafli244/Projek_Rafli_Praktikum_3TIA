@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rafli_3tia.Home.Pertemuan_5.LimaActivity
 import com.example.rafli_3tia.Home.Pertemuan_6.EnamActivity
+import com.example.rafli_3tia.Home.Pertemuan_9.NineActivity
 import com.example.rafli_3tia.LginActivity
 import com.example.rafli_3tia.R
 import com.example.rafli_3tia.databinding.FragmentHome2Binding
@@ -74,6 +75,12 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), EnamActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnToSembilan.setOnClickListener {
+            val intent = Intent(requireContext(), NineActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
         binding.btnLogout.setOnClickListener {

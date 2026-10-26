@@ -27,7 +27,7 @@ class LginActivity : AppCompatActivity() {
         }
 
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
-// Kondisi jika isLogin bernilai true
+        // Kondisi jika isLogin bernilai true
         val isLogin = sharedPref.getBoolean("isLogin", false)
         if (isLogin) {
             startActivity(Intent(this, MainActivity::class.java))
@@ -46,7 +46,7 @@ class LginActivity : AppCompatActivity() {
                 editor.putBoolean("isLogin", true)
                 editor.putString("username", user)
                 editor.apply()
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, BaseActivity::class.java))
                 finish()
             } else {
                 AlertDialog.Builder(this)
