@@ -168,6 +168,30 @@
                 android:textColor="@android:color/white"
                 android:textSize="15sp" />
 
+            <!-- Tombol Pertemuan 9 -->
+            <Button
+                android:id="@+id/btnToSembilan"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal"
+                android:backgroundTint="#444444"
+                android:text="Pertemuan 9"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <!-- Tombol Pertemuan 10 (BARU) -->
+            <Button
+                android:id="@+id/btnToSepuluh"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal"
+                android:backgroundTint="#4A148C"
+                android:text="Pertemuan 10"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
             <!-- Tombol Logout -->
             <Button
                 android:id="@+id/btnLogout"
@@ -179,15 +203,6 @@
                 android:text="Logout"
                 android:textColor="@android:color/white"
                 android:textSize="15sp" />
-
-            <!-- Tombol Pertemuan 9 -->
-            <Button
-                android:id="@+id/btnToSembilan"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal"
-                android:text="Pertemuan_9" />
 
         </androidx.gridlayout.widget.GridLayout>
 
